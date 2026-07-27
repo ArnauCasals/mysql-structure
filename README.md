@@ -42,7 +42,7 @@ git clone https://github.com/ArnauCasals/mysql-structure.git
 2. Open the SQL script:
 
 ```text
-exercise1-optical/optics.sql
+exercise1/optics.sql
 ```
 3. Execute the script using MySQL Workbench or any MySQL client. 
 4. The database, tables and relationships will be created automatically.
@@ -52,7 +52,7 @@ exercise1-optical/optics.sql
 Database relational model:
 
 ```text
-exercise1-optical/
+exercise1/
 │
 ├── optics.sql
 └── optics.png

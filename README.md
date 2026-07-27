@@ -55,7 +55,7 @@ Database relational model:
 exercise1-optical/
 │
 ├── optics.sql
-└── mysql-structure.png
+└── optics.png
 ```
 
 ## 🧩 Database Model and Technical Decisions

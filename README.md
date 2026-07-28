@@ -149,3 +149,90 @@ level1/
     ├── pizzeria.sql
     └── pizzeria.png
 ```
+
+
+# Level 2
+
+## Exercise 1 - YouTube
+
+### Exercise Statement
+
+Database design for a simplified version of YouTube.
+
+The database manages:
+
+- Users
+- Videos
+- Channels
+- Subscriptions
+- Tags
+- Playlists
+- Comments
+- Likes and dislikes
+
+### Features
+
+- Entity-Relationship database model.
+- SQL script for database creation.
+- Management of users and published videos.
+- Video status management (public, hidden and private).
+- Video tags and playlists.
+- User subscriptions to channels.
+- Likes and dislikes tracking.
+- Comments and comment reactions.
+- Primary keys and foreign keys implementation.
+
+### Files
+
+```text
+level2/
+│
+└── exercise1/
+    ├── youtube.sql
+    └── youtube.png
+```
+
+
+## 🧩 Database Model and Technical Decisions
+
+The database was designed following a relational model.
+
+### Main decisions:
+
+- Each user can publish multiple videos.
+- Each video belongs to one user.
+- Videos can have multiple tags using an intermediate table.
+- Users can create channels.
+- Users can subscribe to other users' channels.
+- Video reactions are stored separately to manage likes and dislikes.
+- Users can create playlists containing multiple videos.
+- Comments are linked to users and videos.
+- Comment reactions store user interactions with comments.
+- Primary keys uniquely identify each record.
+- Foreign keys maintain relationships between tables.
+
+## 🚀 Installation and Execution
+
+1. Open DBeaver, MySQL Workbench or any MySQL client.
+
+2. Open the SQL script:
+
+```text
+level2/exercise1/youtube.sql
+```
+
+3. Execute the script.
+
+4. The database, tables, primary keys, foreign keys and relationships will be created automatically.
+
+## 📸 Diagram
+
+Database relational model:
+
+```text
+level2/
+│
+└── exercise1/
+    ├── youtube.sql
+    └── youtube.png
+```

@@ -70,3 +70,79 @@ The database was designed following a relational model.
 - Sales connect customers, employees and glasses.
 - Primary keys uniquely identify each record.
 - Foreign keys maintain relationships between tables.
+
+## Exercise 2 - Pizzeria
+
+### Exercise Statement
+
+Database design for an online food delivery system for a pizzeria.
+
+The database manages:
+
+- Customers
+- Provinces and locations
+- Orders
+- Products
+- Pizzas, burgers and drinks
+- Pizza categories
+- Stores
+- Employees
+- Home deliveries
+
+### Features
+
+- Entity-Relationship database model.
+- SQL script for database creation.
+- Management of customer orders.
+- Product categorization.
+- Store and employee management.
+- Delivery tracking.
+
+### Files
+
+```text
+level1/
+│
+└── exercise2/
+    ├── pizzeria.sql
+    └── pizzeria.png
+```
+## 🧩 Database Model and Technical Decisions
+
+The database was designed following a relational model.
+
+### Main decisions:
+
+- Provinces and locations are stored in separate tables.
+- A province can contain multiple locations.
+- A customer belongs to one location.
+- An order belongs to one customer and one store.
+- Products are managed using a general Product table.
+- Pizzas, burgers and drinks are specialized product types.
+- A pizza belongs to one category, while a category can contain many pizzas.
+- Orders and products have a many-to-many relationship managed through an intermediate table.
+- Employees work in one store and can have different roles such as cook or delivery person.
+- Delivery information stores the responsible employee and delivery date/time.
+
+## 🚀 Installation and Execution
+
+1. Open MySQL Workbench or any MySQL client.
+
+2. Open the SQL script:
+
+```text
+level1/exercise2/pizzeria.sql
+```
+3. Execute the script.
+
+## 📸 Diagram
+
+Database relational model:
+
+```text
+level1/
+│
+└── exercise2/
+    ├── pizzeria.sql
+    └── pizzeria.png
+```

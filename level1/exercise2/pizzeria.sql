@@ -1,4 +1,4 @@
-CREATE DATABASE pizzeria;
+CREATE DATABASE IF NOT EXISTS pizzeria;
 
 USE pizzeria;
 

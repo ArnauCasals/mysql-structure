@@ -30,6 +30,7 @@ The database must manage:
 - MySQL
 - SQL
 - dbdiagram.io
+- DBeaver
 - GitHub
 
 ## 🚀 Installation and Execution
@@ -42,7 +43,7 @@ git clone https://github.com/ArnauCasals/mysql-structure.git
 2. Open the SQL script:
 
 ```text
-exercise1/optics.sql
+level1/exercise1/optics.sql
 ```
 3. Execute the script using MySQL Workbench or any MySQL client. 
 4. The database, tables and relationships will be created automatically.
@@ -52,10 +53,11 @@ exercise1/optics.sql
 Database relational model:
 
 ```text
-exercise1/
+level1/
 │
-├── optics.sql
-└── optics.png
+└── exercise1/
+    ├── optics.sql
+    └── optics.png
 ```
 
 ## 🧩 Database Model and Technical Decisions
@@ -107,6 +109,7 @@ level1/
     ├── pizzeria.sql
     └── pizzeria.png
 ```
+
 ## 🧩 Database Model and Technical Decisions
 
 The database was designed following a relational model.

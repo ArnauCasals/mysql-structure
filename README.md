@@ -24,6 +24,8 @@ The database must manage:
 - SQL script for database creation.
 - Definition of tables and relationships.
 - Primary keys and foreign keys implementation.
+- Test data insertion for database validation.
+- SQL queries to verify database relationships.
 
 ## 🛠 Technologies
 
@@ -45,9 +47,16 @@ git clone https://github.com/ArnauCasals/mysql-structure.git
 ```text
 level1/exercise1/optics.sql
 ```
-3. Execute the script using MySQL Workbench or any MySQL client. 
-4. The database, tables and relationships will be created automatically.
-
+3. Execute the script using DBeaver, MySQL Workbench or any MySQL client.
+4. The database, tables and relationships will be created automatically. 
+5. Insert test data:
+```text
+   level1/exercise1/optics_data.sql 
+   ```
+6. Execute validation queries:
+```text   
+level1/exercise1/optics_queries.sql
+```
 ## 📸 Diagram
 
 Database relational model:
@@ -57,6 +66,8 @@ level1/
 │
 └── exercise1/
     ├── optics.sql
+    ├── optics_data.sql
+    ├── optics_queries.sql
     └── optics.png
 ```
 
@@ -67,11 +78,14 @@ The database was designed following a relational model.
 ### Main decisions:
 
 - Each supplier can provide multiple glasses.
-- Each pair of glasses belongs to only one supplier.
-- Customers can recommend other customers.
-- Sales connect customers, employees and glasses.
-- Primary keys uniquely identify each record.
+- Each pair of glasses belongs to only one supplier. 
+- Customers can recommend other customers. 
+- Sales connect customers, employees and glasses. 
+- Test data was created to verify database operations. 
+- SQL queries were created to validate relationships between tables. 
+- Primary keys uniquely identify each record. 
 - Foreign keys maintain relationships between tables.
+
 
 ## Exercise 2 - Pizzeria
 

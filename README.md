@@ -214,6 +214,8 @@ The database manages:
 - Likes and dislikes tracking.
 - Comments and comment reactions.
 - Primary keys and foreign keys implementation.
+- Test data insertion for database validation.
+- SQL queries to verify database relationships.
 
 ### Files
 
@@ -222,6 +224,8 @@ level2/
 │
 └── exercise1/
     ├── youtube.sql
+    ├── youtube_data.sql
+    ├── youtube_queries.sql
     └── youtube.png
 ```
 
@@ -241,8 +245,11 @@ The database was designed following a relational model.
 - Users can create playlists containing multiple videos.
 - Comments are linked to users and videos.
 - Comment reactions store user interactions with comments.
+- Test data was created to verify database operations.
+- SQL queries were created to validate relationships between tables.
 - Primary keys uniquely identify each record.
 - Foreign keys maintain relationships between tables.
+
 
 ## 🚀 Installation and Execution
 
@@ -256,7 +263,16 @@ level2/exercise1/youtube.sql
 
 3. Execute the script.
 
-4. The database, tables, primary keys, foreign keys and relationships will be created automatically.
+4. Insert test data:
+```text
+level2/exercise1/youtube_data.sql
+```
+5. Execute validation queries:
+```text
+level2/exercise1/youtube_queries.sql
+```
+6. The database, tables, primary keys, foreign keys and relationships will be created and verified.
+
 
 ## 📸 Diagram
 
@@ -267,5 +283,7 @@ level2/
 │
 └── exercise1/
     ├── youtube.sql
+    ├── youtube_data.sql
+    ├── youtube_queries.sql
     └── youtube.png
 ```

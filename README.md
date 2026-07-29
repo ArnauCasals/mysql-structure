@@ -113,6 +113,8 @@ The database manages:
 - Product categorization.
 - Store and employee management.
 - Delivery tracking.
+- Test data insertion for database validation.
+- SQL queries to verify database relationships.
 
 ### Files
 
@@ -121,12 +123,15 @@ level1/
 │
 └── exercise2/
     ├── pizzeria.sql
+    ├── pizzeria_data.sql
+    ├── pizzeria_queries.sql
     └── pizzeria.png
 ```
 
 ## 🧩 Database Model and Technical Decisions
 
 The database was designed following a relational model.
+
 
 ### Main decisions:
 
@@ -140,6 +145,9 @@ The database was designed following a relational model.
 - Orders and products have a many-to-many relationship managed through an intermediate table.
 - Employees work in one store and can have different roles such as cook or delivery person.
 - Delivery information stores the responsible employee and delivery date/time.
+- Test data was created to verify database operations.
+- SQL queries were created to validate relationships between tables.
+
 
 ## 🚀 Installation and Execution
 
@@ -151,6 +159,15 @@ The database was designed following a relational model.
 level1/exercise2/pizzeria.sql
 ```
 3. Execute the script.
+4. Insert test data:
+```text
+level1/exercise2/pizzeria_data.sql
+```
+5. Execute validation queries:
+```text
+level1/exercise2/pizzeria_queries.sql
+```
+6. The database, tables, primary keys, foreign keys and relationships will be created and verified.
 
 ## 📸 Diagram
 
@@ -161,6 +178,8 @@ level1/
 │
 └── exercise2/
     ├── pizzeria.sql
+    ├── pizzeria_data.sql
+    ├── pizzeria_queries.sql
     └── pizzeria.png
 ```
 

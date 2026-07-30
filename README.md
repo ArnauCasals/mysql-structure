@@ -12,20 +12,28 @@ Design and create a database structure for an optical store called "Cul d'Ampoll
 The database must manage:
 
 - Suppliers
+- Brands
 - Glasses
+- Store inventory
+- Stores
 - Customers
+- Customer addresses
 - Employees
 - Sales
+- Sale details
 - Customer recommendations
+
 
 ## ✨ Features
 
 - Entity-Relationship database model.
 - SQL script for database creation.
-- Definition of tables and relationships.
+- Normalized relational database structure.
+- Management of suppliers, brands and glasses.
+- Store inventory management.
+- Customer and employee management.
+- Sales and sale details management.
 - Primary keys and foreign keys implementation.
-- Test data insertion for database validation.
-- SQL queries to verify database relationships.
 
 ## 🛠 Technologies
 
@@ -75,15 +83,17 @@ level1/
 
 The database was designed following a relational model.
 
+
 ### Main decisions:
 
-- Each supplier can provide multiple glasses.
-- Each pair of glasses belongs to only one supplier. 
-- Customers can recommend other customers. 
-- Sales connect customers, employees and glasses. 
-- Test data was created to verify database operations. 
-- SQL queries were created to validate relationships between tables. 
-- Primary keys uniquely identify each record. 
+- Addresses are stored in a separate table and reused by customers, suppliers and stores.
+- Suppliers provide brands.
+- Each brand can have multiple glasses models.
+- Store inventory manages the quantity of glasses available in each store.
+- Customers can recommend other customers.
+- Sales connect customers and employees.
+- Sale details allow a sale to contain multiple glasses.
+- Primary keys uniquely identify each record.
 - Foreign keys maintain relationships between tables.
 
 

@@ -1,25 +1,98 @@
 USE optics;
 
--- 1. Total invoices of a customer in a specific period
-SELECT COUNT(*) AS total_invoices
+
+-- 1. Show all customers with their addresses
+
+SELECT
+    Customer.name,
+    Customer.surname,
+    Address.street,
+    Address.city
+FROM Customer
+         JOIN Address
+              ON Customer.id_address = Address.id_address;
+
+
+
+-- 2. Show suppliers and their brands
+
+SELECT
+    Supplier.name AS supplier,
+    Brand.name AS brand
+FROM Supplier
+         JOIN Brand
+              ON Supplier.id_supplier = Brand.id_supplier;
+
+
+
+-- 3. Show all glasses with their brands
+
+SELECT
+    Glasses.id_glasses,
+    Brand.name AS brand,
+    Glasses.frame_type,
+    Glasses.frame_color,
+    Glasses.price
+FROM Glasses
+         JOIN Brand
+              ON Glasses.id_brand = Brand.id_brand;
+
+
+
+-- 4. Show stock available in each store
+
+SELECT
+    Store.name AS store,
+    Glasses.id_glasses,
+    Brand.name AS brand,
+    Store_Inventory.quantity
+FROM Store
+         JOIN Store_Inventory
+              ON Store.id_store = Store_Inventory.id_store
+         JOIN Glasses
+              ON Store_Inventory.id_glasses = Glasses.id_glasses
+         JOIN Brand
+              ON Glasses.id_brand = Brand.id_brand;
+
+
+
+-- 5. Show sales with customer and employee information
+
+SELECT
+    Sale.id_sale,
+    Sale.sale_date,
+    Customer.name AS customer,
+    Employee.name AS employee
 FROM Sale
-WHERE id_customer = 1
-  AND sale_date BETWEEN '2026-01-01' AND '2026-12-31';
+         JOIN Customer
+              ON Sale.id_customer = Customer.id_customer
+         JOIN Employee
+              ON Sale.id_employee = Employee.id_employee;
 
 
--- 2. Different glasses models sold by an employee during a year
-SELECT DISTINCT g.brand AS glasses_model
-FROM Glasses g
-         JOIN Sale s
-              ON g.id_glasses = s.id_glasses
-WHERE s.id_employee = 1
-          AND YEAR(s.sale_date) = 2026;
+
+-- 6. Show products sold in each sale
+
+SELECT
+    Sale.id_sale,
+    Brand.name AS brand,
+    Sale_Detail.quantity,
+    Sale_Detail.unit_price
+FROM Sale
+         JOIN Sale_Detail
+              ON Sale.id_sale = Sale_Detail.id_sale
+         JOIN Glasses
+              ON Sale_Detail.id_glasses = Glasses.id_glasses
+         JOIN Brand
+              ON Glasses.id_brand = Brand.id_brand;
 
 
--- 3. Suppliers that have provided glasses successfully sold by the optical store
-SELECT DISTINCT sp.name AS supplier
-FROM Supplier sp
-         JOIN Glasses g
-              ON sp.id_supplier = g.id_supplier
-         JOIN Sale s
-              ON g.id_glasses = s.id_glasses;
+
+-- 7. Show customers recommended by other customers
+
+SELECT
+    Customer.name AS customer,
+    Recommended.name AS recommended_by
+FROM Customer
+         JOIN Customer AS Recommended
+              ON Customer.recommended_by = Recommended.id_customer;

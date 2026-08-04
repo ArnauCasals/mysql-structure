@@ -1,5 +1,38 @@
 # MySQL Structure
 
+mysql-estructura
+│
+├── README.md  ✅ AQUÍ VA ESTE CONTENIDO
+├── docker-compose.yml
+│
+├── init
+│   └── databases
+│       ├── optics.sql
+│       ├── pizzeria.sql
+│       └── youtube.sql
+│
+├── level1
+│   ├── exercise1
+│   │   ├── optics.sql
+│   │   ├── optics_data.sql
+│   │   ├── optics_queries.sql
+│   │   └── optics.png
+│   │
+│   └── exercise2
+│       ├── pizzeria.sql
+│       ├── pizzeria_data.sql
+│       ├── pizzeria_queries.sql
+│       └── pizzeria.png
+│
+├── level2
+│   └── exercise1
+│       ├── youtube.sql
+│       ├── youtube_data.sql
+│       ├── youtube_queries.sql
+│       └── youtube.png
+│
+└── level3
+
 **Description**:  
 Database design exercises created using Entity-Relationship models and SQL scripts.
 
@@ -39,9 +72,31 @@ The database must manage:
 
 - MySQL
 - SQL
-- dbdiagram.io
-- DBeaver
+- MySQL Workbench
+- IntelliJ IDEA
+- Docker
 - GitHub
+
+## 🐳 Docker MySQL Environment
+
+The project includes a Docker environment to run MySQL locally.
+
+Start the MySQL container:
+
+```bash
+docker compose up -d
+```
+Stop the MySQL container:
+```bash
+docker compose down
+```
+The database initialization scripts are automatically loaded from:
+init/databases/
+
+Including:
+optics.sql
+pizzeria.sql
+youtube.sql
 
 ## 🚀 Installation and Execution
 
@@ -263,7 +318,7 @@ The database was designed following a relational model.
 
 ## 🚀 Installation and Execution
 
-1. Open DBeaver, MySQL Workbench or any MySQL client.
+1. Open MySQL Workbench or any MySQL client.
 
 2. Open the SQL script:
 

@@ -1,5 +1,5 @@
 # MySQL Structure
-
+```text
 mysql-estructura
 │
 ├── README.md  ✅ AQUÍ VA ESTE CONTENIDO
@@ -32,6 +32,12 @@ mysql-estructura
 │       └── youtube.png
 │
 └── level3
+       └── exercise1
+               ├── spotify.sql
+               ├── spotify_data.sql
+               ├── spotify_queries.sql
+               └── spotify.png
+```
 
 **Description**:  
 Database design exercises created using Entity-Relationship models and SQL scripts.
@@ -351,4 +357,111 @@ level2/
     ├── youtube_data.sql
     ├── youtube_queries.sql
     └── youtube.png
+```
+
+# Level 3
+
+## Exercise 1 - Spotify
+
+### Exercise Statement
+
+Database design for a simplified version of Spotify.
+
+The database must manage:
+
+- Users (free and premium)
+- Premium subscriptions
+- Payment methods
+- Payments history
+- Playlists
+- Songs
+- Albums
+- Artists
+- Artist relationships
+- User follows
+- Favourite songs and albums
+
+
+## Features
+
+- Entity-Relationship database model.
+- SQL script for database creation.
+- Management of free and premium users.
+- Subscription and payment management.
+- Playlist and song management.
+- Artist, album and song relationships.
+- Favourite content management.
+- Test data insertion for database validation.
+- SQL queries to verify database relationships.
+
+
+## Files
+
+```text
+level3/
+│
+└── exercise1/
+    ├── spotify.sql
+    ├── spotify_data.sql
+    ├── spotify_queries.sql
+    └── spotify.png
+```
+## 🧩 Database Model and Technical Decisions
+
+The database was designed following a relational model.
+
+### Main decisions:
+
+- Users can be free or premium.
+- Premium users have subscriptions with payment information.
+- Credit card and PayPal information are stored separately.
+- Payments are stored to keep a history of premium transactions.
+- Users can create playlists.
+- Deleted playlists are not removed; they are marked as deleted and store the deletion date.
+- Songs belong to one album.
+- Albums belong to one artist.
+- Users can follow multiple artists.
+- Artists can have relationships with other related artists.
+- Favourite songs and albums are managed using intermediate tables.
+- Playlist songs are managed through a many-to-many relationship.
+- Primary keys uniquely identify each record.
+- Foreign keys maintain relationships between tables.
+
+
+## 🚀 Installation and Execution
+
+1. Open MySQL Workbench or any MySQL client.
+
+2. Open the SQL script:
+
+```text
+level3/exercise1/spotify.sql
+```
+
+3. Execute the script.
+
+4. Insert test data:
+```text
+level3/exercise1/spotify_data.sql
+```
+
+5. Execute validation queries:
+```text
+level3/exercise1/spotify_queries.sql
+```
+
+6. Execute database, tables, primary keys and relationships will be created and verified.
+
+## 📸 Diagram
+
+Database relational model:
+
+```text
+level3/
+│
+└── exercise1/
+    ├── spotify.sql
+    ├── spotify_data.sql
+    ├── spotify_queries.sql
+    └── spotify.png
 ```
